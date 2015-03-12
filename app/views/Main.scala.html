@@ -33,8 +33,8 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
               <li><a href="#">Store</a></li>
-              <li><a href="#">Pueo</a></li>
-              <li><a href="#">Aukahi</a></li>
+              <li class="@("active".when(page == "Pueo"))"><a href="@routes.Application.Pueo()">Pueo</a></li>
+              <li class="@("active".when(page == "Aukahi"))"><a href="@routes.Application.Aukahi()">Aukahi</a></li>
               <li><a href="#">Kamanu V6</a></li>
               <li><a href="#">Iho</a></li>
               <li><a href="#">About</a></li>

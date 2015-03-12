@@ -12,7 +12,7 @@ import static play.test.Helpers.contentType;
  * Simple (JUnit) tests that can call all parts of a play app.
  * If you are interested in mocking a whole application, see the wiki for more details.
  */
-public class ApplicationTest {
+public class ApplicationTestAukahi {
 
   /**
    * Tests that 1+1 equals 2.
@@ -24,13 +24,13 @@ public class ApplicationTest {
   }
 
   /**
-   * Tests that the Index and Pueo template renders correctly.
+   * Tests that the Aukahi template renders correctly.
    */
   @Test
   public void renderTemplate() {
-    Content html = views.html.Index.render("Welcome to the home page.");
+    Content html = views.html.Pueo.render("Welcome to the Aukahi page");
     assertThat(contentType(html)).isEqualTo("text/html");
-    assertThat(contentAsString(html)).contains("We build canoes.");
+    assertThat(contentAsString(html)).contains("The Aukahi: Tahitian V1 design with Hawaiian attitude.");
   }
 
 

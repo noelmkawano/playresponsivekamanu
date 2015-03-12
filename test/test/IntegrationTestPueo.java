@@ -14,18 +14,17 @@ import static play.test.Helpers.testServer;
 /**
  * Runs a server with a fake in-memory database to test the system.
  */
-public class IntegrationTest {
+public class IntegrationTestPueo {
 
   /**
-   * Check to see that the index page can be retrieved.
+   * Check to see that Pueo page can be retrieved.
    */
   @Test
   public void test() {
     running(testServer(3333, fakeApplication(inMemoryDatabase())), HTMLUNIT, new Callback<TestBrowser>() {
       public void invoke(TestBrowser browser) {
-        browser.goTo("http://localhost:3333");
-        assertThat(browser.pageSource()).contains("We build canoes.");
-
+        browser.goTo("http://localhost:3333/Pueo");
+        assertThat(browser.pageSource()).contains("The Pueo is the most versatile all-around canoe that we know how to make.");
       }
     });
   }
