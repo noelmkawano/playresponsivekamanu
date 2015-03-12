@@ -28,7 +28,7 @@ public class ApplicationTestAukahi {
    */
   @Test
   public void renderTemplate() {
-    Content html = views.html.Pueo.render("Welcome to the Aukahi page");
+    Content html = views.html.Aukahi.render("Welcome to the Aukahi page");
     assertThat(contentType(html)).isEqualTo("text/html");
     assertThat(contentAsString(html)).contains("The Aukahi: Tahitian V1 design with Hawaiian attitude.");
   }
